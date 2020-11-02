@@ -1,0 +1,187 @@
+<!-- HttpEncodingAutoConfiguration -->
+<bean id="characterEncodingFilter"
+      class="org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter"/>
+
+
+
+<!-- MultipartAutoConfiguration -->
+<bean id="spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties"
+      class="org.springframework.boot.autoconfigure.web.servlet.MultipartProperties"/>
+
+<bean id="multipartConfigElement"
+      class="javax.servlet.MultipartConfigElement"/>
+
+
+
+<!-- DispatcherServletAutoConfiguration -->
+<bean id="dispatcherServlet"
+      class="org.springframework.web.servlet.DispatcherServlet"/>
+
+<bean id="dispatcherServletRegistration"
+      class="org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean"/>
+
+<bean class="org.springframework.boot.context.properties.BoundConfigurationProperties"/>
+
+<bean id="spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties"
+      class="org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties"/>
+
+<bean id="requestContextFilter"
+      class="org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter"/>
+
+<bean id="formContentFilter"
+      class="org.springframework.boot.web.servlet.filter.OrderedFormContentFilter"/>
+
+<bean id="server-org.springframework.boot.autoconfigure.web.ServerProperties"
+      class="org.springframework.boot.autoconfigure.web.ServerProperties"/>
+
+<bean class="org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata"/>
+
+<bean id="spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties"
+      class="org.springframework.boot.autoconfigure.web.ResourceProperties"/>
+
+
+
+<!-- ErrorMvcAutoConfiguration -->
+<bean id="errorPageFilter"
+      class="org.springframework.boot.web.servlet.support.ErrorPageFilter"/>
+
+<bean id="errorPageFilterRegistration"
+      class="org.springframework.boot.web.servlet.FilterRegistrationBean"/>
+
+<bean id="conventionErrorViewResolver"
+      class="org.springframework.boot.autoconfigure.web.servlet.error.DefaultErrorViewResolver"/>
+
+<bean id="error"
+      class="org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView"/>
+
+<bean id="errorAttributes"
+      class="org.springframework.boot.web.servlet.error.DefaultErrorAttributes"/>
+
+<bean id="basicErrorController"
+      class="org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController"/>
+
+<bean id="errorPageCustomizer"
+      class="org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$ErrorPageCustomizer"/>
+
+
+
+<!-- WebMvcAutoConfiguration -->
+<bean id="beanNameViewResolver"
+      class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+
+<bean id="mvcContentNegotiationManager"
+      class="org.springframework.web.accept.ContentNegotiationManager"/>
+
+<bean id="mvcConversionService"
+      class="org.springframework.boot.autoconfigure.web.format.WebConversionService"/>
+
+<bean id="mvcValidator"
+      class="org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport$NoOpValidator"/>
+
+<bean id="stringHttpMessageConverter"
+      class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+<bean id="requestMappingHandlerAdapter"
+      class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+
+<bean id="mvcResourceUrlProvider"
+      class="org.springframework.web.servlet.resource.ResourceUrlProvider"/>
+
+<bean id="requestMappingHandlerMapping"
+      class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+<bean id="welcomePageHandlerMapping"
+      class="org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping"/>
+
+<bean id="mvcPathMatcher"
+      class="org.springframework.util.AntPathMatcher"/>
+
+<bean id="mvcUrlPathHelper"
+      class="org.springframework.web.util.UrlPathHelper"/>
+
+<bean id="viewControllerHandlerMapping"
+      class="org.springframework.beans.factory.support.NullBean"/>
+
+<bean id="beanNameHandlerMapping"
+      class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+<bean id="routerFunctionMapping"
+      class="org.springframework.web.servlet.function.support.RouterFunctionMapping"/>
+
+<bean id="resourceHandlerMapping"
+      class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"/>
+
+<bean id="defaultServletHandlerMapping"
+      class="org.springframework.beans.factory.support.NullBean"/>
+
+<bean id="handlerFunctionAdapter"
+      class="org.springframework.web.servlet.function.support.HandlerFunctionAdapter"/>
+
+<bean id="mvcUriComponentsContributor"
+      class="org.springframework.web.method.support.CompositeUriComponentsContributor"/>
+
+<bean id="httpRequestHandlerAdapter"
+      class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>
+
+<bean id="simpleControllerHandlerAdapter"
+      class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+<bean id="handlerExceptionResolver"
+      class="org.springframework.web.servlet.handler.HandlerExceptionResolverComposite"/>
+
+<bean id="mvcViewResolver"
+      class="org.springframework.web.servlet.view.ViewResolverComposite"/>
+
+<bean id="defaultViewResolver"
+      class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+
+<bean id="viewResolver"
+      class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver"/>
+
+<bean id="localeCharsetMappingsCustomizer"
+      class="org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration$LocaleCharsetMappingsCustomizer"/>
+
+<bean id="multipartResolver"
+      class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+<bean class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
+
+<bean class="org.springframework.web.servlet.theme.FixedThemeResolver"/>
+
+<bean class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator"/>
+
+<bean class="org.springframework.web.servlet.support.SessionFlashMapManager"/>
+
+<bean id="mvcHandlerMappingIntrospector"
+      class="org.springframework.web.servlet.handler.HandlerMappingIntrospector"/>
+
+
+
+
+<!-- JacksonAutoConfiguration -->
+<bean id="spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties"
+      class="org.springframework.boot.autoconfigure.jackson.JacksonProperties"/>
+
+<bean id="standardJacksonObjectMapperBuilderCustomizer"
+      class="org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer"/>
+
+<bean id="parameterNamesModule"
+      class="com.fasterxml.jackson.module.paramnames.ParameterNamesModule"/>
+
+<bean id="jsonComponentModule"
+      class="org.springframework.boot.jackson.JsonComponentModule"/>
+
+<bean id="jacksonObjectMapperBuilder"
+      class="org.springframework.http.converter.json.Jackson2ObjectMapperBuilder"/>
+
+<bean id="jacksonObjectMapper"
+      class="com.fasterxml.jackson.databind.ObjectMapper"/>
+
+
+
+<!-- HttpMessageConvertersAutoConfiguration -->
+<bean id="mappingJackson2HttpMessageConverter"
+      class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+
+<bean id="messageConverters"
+      class="org.springframework.boot.autoconfigure.http.HttpMessageConverters"/>
